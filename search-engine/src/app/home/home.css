@@ -1,0 +1,74 @@
+.box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.searches{
+    text-align: center;
+}
+
+mat-icon,button {
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+mat-icon {
+    background-color: brown;
+    position: relative;
+    padding: 4px 4px 3px 4px;
+    border-radius: 50%;
+    top: 9px;
+    color: white;
+}
+
+input {
+    width: 15rem;
+    height: 1.7rem;
+    margin-top: 1.5rem;
+    border-radius: 6px;
+    border-color: 2px gray solid;
+    padding: 4px;
+}
+
+label {
+    font-size: 2rem;
+}
+
+input::placeholder {
+    color: black;
+    padding: 3px;
+}
+
+.table {
+    position: relative;
+    display: grid;
+    justify-content: center;
+}
+
+table {
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 10px 5px;
+}
+
+th, td {
+  padding: 1rem;
+}
+
+thead {
+    background-color: rgb(14, 40, 128);
+    color: white;
+}
+
+tbody {
+    background-color: #FFFFDE;
+}

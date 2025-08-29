@@ -1,0 +1,38 @@
+<div>
+    <div>
+        <mat-drawer-container class="example-container">
+            <mat-drawer #drawer mode="side">
+                <span>
+                    <mat-icon style="color: black; float: right;" (click)="drawer.toggle()">cancel</mat-icon>
+                </span>
+                <div class="side-content">
+                    <details>
+                        <summary>Courses</summary>
+                        <div class="side-data">
+                            <p>Html 5</p>
+                            <p>CSS3</p>
+                            <p>Node JS</p>
+                            <p>Angular</p>
+                            <p>Python</p>
+                            <p>Java</p>
+                        </div>
+                    </details>
+                </div>
+            </mat-drawer>
+            <mat-drawer-content>
+                <button mat-button-raised (click)="drawer.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                
+                Course Offered
+            </mat-drawer-content>
+        </mat-drawer-container>
+    </div>
+
+    <div>
+        <div class="nav">
+            <li routerLink="/" class="nav-items" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</li>
+            <li routerLink="/upload" class="nav-items" routerLinkActive="active">Upload</li>
+        </div>
+    </div>
+</div>

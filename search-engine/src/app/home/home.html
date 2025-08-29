@@ -1,0 +1,39 @@
+<div>
+    <div class="box">
+        <form action="">
+            <label for="">Search by Id</label>
+            <br>
+            <input [(ngModel)]="searchId" type="search" name="user" placeholder="search student" id="">
+            <button><mat-icon>search</mat-icon></button>
+        </form>
+        <h2 class="searches">{{ searchId }}</h2>
+    </div>
+    @if(visible){
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Profile</th>
+                        <th>Name</th>
+                        <th>DOB</th>
+                        <th>Course</th>
+                        <th>Duration</th>
+                        <th>Years of passing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>123</td>
+                        <td>some img</td>
+                        <td>ANY</td>
+                        <td>12/12/12</td>
+                        <td>IT</td>
+                        <td>2012-2016</td>
+                        <td>2016</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

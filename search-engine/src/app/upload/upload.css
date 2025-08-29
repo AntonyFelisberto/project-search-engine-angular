@@ -1,0 +1,25 @@
+.upload {
+    display: grid;
+    justify-items: center;
+    margin-top: 10rem;
+}
+
+input{
+    display: grid;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    width: 18rem;
+    border: 2px solid brown;
+    border-radius: 4px;
+}
+
+.upload button {
+    font-size: 1.5rem;
+    padding: 7px 15px;
+    border-radius: 5px;
+    width: 19.5rem;
+}
+
+label {
+    font-size: 2rem;
+}

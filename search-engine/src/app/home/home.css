@@ -52,6 +52,7 @@ input::placeholder {
     position: relative;
     display: grid;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 table {
@@ -71,4 +72,9 @@ thead {
 
 tbody {
     background-color: #FFFFDE;
+}
+
+.t-image {
+    width: 5rem;
+    height: 4rem;
 }

@@ -1,16 +1,24 @@
 <div class="upload">
     <label for="">Upload document by filling the form below</label>
     <br>
-    <form action="">
-        <input type="text" name="searchId" placeholder="Search id">
-        <input type="text" name="name" placeholder="name">
-        <input type="email" name="email" placeholder="email">
-        <input type="text" name="dob" placeholder="date of birth">
-        <input type="text" name="course" placeholder="duration">
-        <input type="text" name="course" placeholder="duration">
-        <input type="text" name="year" placeholder="passed year">
-        <input type="file" name="image" placeholder="Search id">
+    @if(!submitted){
+        <form [formGroup]="form" autocomplete="off" (ngSubmit)="onSubmit()">
+            <input type="text" formControlName="studentId" placeholder="Student id">
+            <input type="text" formControlName="name" placeholder="name">
+            <input type="text" formControlName="dob" placeholder="date of birth">
+            <input type="text" formControlName="course" placeholder="course">
+            <input type="text" formControlName="duration" placeholder="duration">
+            <input type="text" formControlName="passingYear" placeholder="passed year">
+            <input type="file" (change)="onFileSelect($event)">
 
-        <button type="submit">Upload</button>
-    </form>
+            @if(imageData){
+                <div>
+                    <img [src]="imageData" alt="">
+                </div>
+            }
+            <button type="submit" [disabled]="!form.valid">Upload</button>
+        </form>
+    } @else {
+        <p>Submitted Successfully</p>
+    }
 </div>

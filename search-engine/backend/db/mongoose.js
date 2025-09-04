@@ -1,17 +1,16 @@
 const mongoose = require('mongoose')
 
-const studentSchema = mongoose.Schema({
-    studentId: {
-        type: String
-    },
-    name: String,
-    dob: String,
-    course: String,
-    duration: String,
-    passingYear: String,
-    imagePath: {
-        type: String
-    }
+mongoose.Promise = global.Promise
+
+mongoose.connect('mongodb://localhost:27017/student',
+    {useNewUrlParser:true, useUnifiedTopology: true}
+).then(()=> {
+    console.log("connected to database")
+}).catch((e)=> {
+    console.log('error connecting mongoDB')
+    console.log(e)
 })
 
-module.exports = mongoose.model('student', studentSchema)
+module.exports = {
+    mongoose
+}

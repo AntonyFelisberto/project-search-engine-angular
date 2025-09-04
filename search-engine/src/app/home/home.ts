@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Api } from '../service/api';
 
 @Component({
   selector: 'app-home',
@@ -6,13 +7,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
-export class Home implements OnInit{
-  searchId!: string
-  visible:boolean = false
+export class Home implements OnInit {
+  searchText!: string
+  studentData!: any[]
 
-  constructor(){}
+  constructor(private apiService: Api){}
 
   ngOnInit(): void {
+    this.apiService.getStudents().subscribe((data:any)=> {
+      this.studentData = data
+      console.log(this.studentData)
+    })
   }
 
 }

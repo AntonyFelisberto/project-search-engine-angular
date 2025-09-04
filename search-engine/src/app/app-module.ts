@@ -9,13 +9,16 @@ import { Upload } from './upload/upload';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { provideHttpClient } from '@angular/common/http';
+import { SearchPipe } from './pipes/search-pipe';
 
 @NgModule({
   declarations: [
     App,
     Home,
     Navbar,
-    Upload
+    Upload,
+    SearchPipe
   ],
   imports: [
     FormsModule,
@@ -23,11 +26,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     MatSidenavModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideZonelessChangeDetection()
+    provideZonelessChangeDetection(),
+    provideHttpClient()
   ],
   bootstrap: [App]
 })
